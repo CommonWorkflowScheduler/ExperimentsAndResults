@@ -1,0 +1,199 @@
+Launcher pod spec file: .nextflow.pod.yaml
+Pod submitted: grave-gates .. waiting to start[2KPod started: grave-gates
+mv: cannot move ‘/data/launch/nxf-tmp.iNhIIx’ to ‘.//usr/local/bin/nextflow’: No such file or directory
+N E X T F L O W  ~  version 22.09.7-edge
+Launching `/input/pipelines/sarek/main.nf` [grave-gates] DSL2 - revision: c2275107d1
+
+
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;37m      ____[0m
+[0;37m    .´ _  `.[0m
+[0;37m   /  [0;32m|\[0m`-_ \[0m     [0;34m __        __   ___     [0m
+[0;37m  |   [0;32m| \[0m  `-|[0m    [0;34m|__`  /\  |__) |__  |__/[0m
+[0;37m   \ [0;32m|   \[0m  /[0m     [0;34m.__| /¯¯\ |  \ |___ |  \[0m
+[0;37m    `[0;32m|[0m____[0;32m\[0m´[0m
+
+[0;35m  nf-core/sarek v3.0.2[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName                   : [0;32mgrave-gates[0m
+  [0;34mlaunchDir                 : [0;32m/data/launch[0m
+  [0;34mworkDir                   : [0;32m/data/work[0m
+  [0;34mprojectDir                : [0;32m/input/pipelines/sarek[0m
+  [0;34muserName                  : [0;32mroot[0m
+  [0;34mprofile                   : [0;32mtest[0m
+  [0;34mconfigFiles               : [0;32m/input/pipelines/sarek/nextflow.config, /data/launch/nextflow.config[0m
+
+[1mInput/output options[0m
+  [0;34minput                     : [0;32m/input/sarek/input.csv[0m
+  [0;34moutdir                    : [0;32m/data/output[0m
+
+[1mMain options[0m
+  [0;34msplit_fastq               : [0;32m0[0m
+  [0;34mintervals                 : [0;32m/input/sarek/reference/genome.interval_list[0m
+  [0;34mtools                     : [0;32mstrelka[0m
+
+[1mReference genome options[0m
+  [0;34mgenome                    : [0;32mnull[0m
+  [0;34mdbsnp                     : [0;32m/input/sarek/reference/dbsnp_146.hg38.vcf.gz[0m
+  [0;34mfasta                     : [0;32m/input/sarek/reference/genome.fasta[0m
+  [0;34mgermline_resource         : [0;32m/input/sarek/reference/gnomAD.r2.1.1.vcf.gz[0m
+  [0;34mknown_indels              : [0;32m/input/sarek/reference/mills_and_1000G.indels.vcf.gz[0m
+  [0;34msnpeff_db                 : [0;32mWBcel235.105[0m
+  [0;34msnpeff_genome             : [0;32mWBcel235[0m
+  [0;34msnpeff_version            : [0;32m5.1[0m
+  [0;34mvep_genome                : [0;32mWBcel235[0m
+  [0;34mvep_species               : [0;32mcaenorhabditis_elegans[0m
+  [0;34mvep_cache_version         : [0;32m106[0m
+  [0;34mvep_version               : [0;32m106.1[0m
+  [0;34migenomes_base             : [0;32ms3://ngi-igenomes/igenomes[0m
+  [0;34migenomes_ignore           : [0;32mtrue[0m
+
+[1mInstitutional config options[0m
+  [0;34mconfig_profile_name       : [0;32mTest profile[0m
+  [0;34mconfig_profile_description: [0;32mMinimal test dataset to check pipeline function[0m
+
+[1mMax job request options[0m
+  [0;34mmax_cpus                  : [0;32m6[0m
+  [0;34mmax_memory                : [0;32m50 GB[0m
+  [0;34mmax_time                  : [0;32m8.h[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use nf-core/sarek for your analysis please cite:
+
+* The pipeline
+  https://doi.org/10.12688/f1000research.16665.2
+  https://doi.org/10.5281/zenodo.4468605
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/nf-core/sarek/blob/master/CITATIONS.md
+-[2m----------------------------------------------------[0m-
+WARN: There's no process matching config selector: .*:FREEC_SOMATIC -- Did you mean: FREEC_SOMATIC?
+WARN: There's no process matching config selector: .*:FILTERVARIANTTRANCHES -- Did you mean: FILTERVARIANTTRANCHES?
+WARN: There's no process matching config selector: NFCORE_SAREK:SAREK:GERMLINE_VARIANT_CALLING:RUN_HAPLOTYPECALLER:JOINT_GERMLINE:BCFTOOLS_SORT
+[02/9a1b89] Submitted process > NFCORE_SAREK:SAREK:PREPARE_GENOME:BWAMEM1_INDEX (genome.fasta)
+[24/cff3b0] Submitted process > NFCORE_SAREK:SAREK:PREPARE_GENOME:SAMTOOLS_FAIDX (genome.fasta)
+[56/a13190] Submitted process > NFCORE_SAREK:SAREK:PREPARE_GENOME:GATK4_CREATESEQUENCEDICTIONARY (genome.fasta)
+[b3/4c3597] Submitted process > NFCORE_SAREK:SAREK:PREPARE_INTERVALS:GATK4_INTERVALLISTTOBED (genome)
+[96/d31f10] Submitted process > NFCORE_SAREK:SAREK:PREPARE_GENOME:TABIX_KNOWN_INDELS (mills_and_1000G.indels.vcf)
+[f1/5bbc26] Submitted process > NFCORE_SAREK:SAREK:RUN_FASTQC:FASTQC (test1-test_L1)
+[df/c83bca] Submitted process > NFCORE_SAREK:SAREK:PREPARE_GENOME:TABIX_DBSNP (dbsnp_146.hg38.vcf)
+[90/0fa6ad] Submitted process > NFCORE_SAREK:SAREK:PREPARE_INTERVALS:CREATE_INTERVALS_BED (genome.interval_list)
+[00/777a6f] Submitted process > NFCORE_SAREK:SAREK:RUN_FASTQC:FASTQC (test2-test_L1)
+[b9/aa955f] Submitted process > NFCORE_SAREK:SAREK:RUN_FASTQC:FASTQC (test3-test_L1)
+[37/c35f0c] Submitted process > NFCORE_SAREK:SAREK:RUN_FASTQC:FASTQC (test4-test_L1)
+[d6/cc98db] Submitted process > NFCORE_SAREK:SAREK:RUN_FASTQC:FASTQC (test7-test_L1)
+[69/973a74] Submitted process > NFCORE_SAREK:SAREK:RUN_FASTQC:FASTQC (test8-test_L1)
+[af/d6ac09] Submitted process > NFCORE_SAREK:SAREK:GATK4_MAPPING:BWAMEM1_MEM (test1)
+[17/0ed729] Submitted process > NFCORE_SAREK:SAREK:GATK4_MAPPING:BWAMEM1_MEM (test2)
+[17/826d5b] Submitted process > NFCORE_SAREK:SAREK:GATK4_MAPPING:BWAMEM1_MEM (test4)
+[21/3147cf] Submitted process > NFCORE_SAREK:SAREK:GATK4_MAPPING:BWAMEM1_MEM (test3)
+[9c/b68d09] Submitted process > NFCORE_SAREK:SAREK:GATK4_MAPPING:BWAMEM1_MEM (test7)
+[a8/820dcb] Submitted process > NFCORE_SAREK:SAREK:GATK4_MAPPING:BWAMEM1_MEM (test8)
+[d9/a7fedb] Submitted process > NFCORE_SAREK:SAREK:PREPARE_INTERVALS:TABIX_BGZIPTABIX_INTERVAL_SPLIT (chr22_1-40001)
+[5f/dc82c6] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:GATK4_MARKDUPLICATES (test2)
+[0c/788262] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:GATK4_MARKDUPLICATES (test7)
+[15/2811b8] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:GATK4_MARKDUPLICATES (test8)
+[5b/161582] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:GATK4_MARKDUPLICATES (test1)
+[9a/795dab] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:GATK4_MARKDUPLICATES (test4)
+[3f/3ef7de] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:GATK4_MARKDUPLICATES (test3)
+[f9/81d009] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:SAMTOOLS_BAMTOCRAM (test2)
+[43/fe84f3] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:SAMTOOLS_BAMTOCRAM (test8)
+[f6/4e46a9] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:SAMTOOLS_BAMTOCRAM (test4)
+[c3/65636a] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:SAMTOOLS_STATS_CRAM (test2)
+[af/5d7ded] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:MOSDEPTH (test2)
+[f1/0b194b] Submitted process > NFCORE_SAREK:SAREK:PREPARE_RECALIBRATION:BASERECALIBRATOR (test2)
+[72/8298e7] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:SAMTOOLS_BAMTOCRAM (test7)
+[0a/93bc42] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:SAMTOOLS_BAMTOCRAM (test1)
+[af/adbcc8] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:SAMTOOLS_STATS_CRAM (test4)
+[50/348225] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:MOSDEPTH (test4)
+[f0/33227a] Submitted process > NFCORE_SAREK:SAREK:PREPARE_RECALIBRATION:BASERECALIBRATOR (test4)
+[3b/cedf8d] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:MOSDEPTH (test8)
+[07/7c4fbd] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:SAMTOOLS_STATS_CRAM (test8)
+[34/388ced] Submitted process > NFCORE_SAREK:SAREK:PREPARE_RECALIBRATION:BASERECALIBRATOR (test8)
+[33/f3b57e] Submitted process > NFCORE_SAREK:SAREK:RECALIBRATE:APPLYBQSR (test2)
+[b0/d2b9a6] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:SAMTOOLS_BAMTOCRAM (test3)
+[da/9bd481] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:SAMTOOLS_STATS_CRAM (test7)
+[41/0ae3ea] Submitted process > NFCORE_SAREK:SAREK:PREPARE_RECALIBRATION:BASERECALIBRATOR (test7)
+[bf/c152a5] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:MOSDEPTH (test7)
+[93/e7f0c1] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:MOSDEPTH (test1)
+[9b/bc02f3] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:SAMTOOLS_STATS_CRAM (test1)
+[fc/e056ba] Submitted process > NFCORE_SAREK:SAREK:PREPARE_RECALIBRATION:BASERECALIBRATOR (test1)
+[84/d3f3b7] Submitted process > NFCORE_SAREK:SAREK:RECALIBRATE:APPLYBQSR (test4)
+[f8/8671fb] Submitted process > NFCORE_SAREK:SAREK:RECALIBRATE:APPLYBQSR (test8)
+[9e/a376b7] Submitted process > NFCORE_SAREK:SAREK:RECALIBRATE:MERGE_INDEX_CRAM:INDEX_CRAM (test2)
+[ba/d3ba93] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:SAMTOOLS_STATS_CRAM (test3)
+[62/b908f4] Submitted process > NFCORE_SAREK:SAREK:MARKDUPLICATES:BAM_TO_CRAM:MOSDEPTH (test3)
+[86/c479c4] Submitted process > NFCORE_SAREK:SAREK:PREPARE_RECALIBRATION:BASERECALIBRATOR (test3)
+[c5/c17d7e] Submitted process > NFCORE_SAREK:SAREK:RECALIBRATE:APPLYBQSR (test1)
+[33/50eb47] Submitted process > NFCORE_SAREK:SAREK:CRAM_QC:SAMTOOLS_STATS (test2)
+[aa/c904c8] Submitted process > NFCORE_SAREK:SAREK:CRAM_QC:MOSDEPTH (test2)
+[44/ace8e6] Submitted process > NFCORE_SAREK:SAREK:GERMLINE_VARIANT_CALLING:RUN_STRELKA_SINGLE:STRELKA_SINGLE (test2)
+[4d/488963] Submitted process > NFCORE_SAREK:SAREK:RECALIBRATE:APPLYBQSR (test7)
+[57/14b0be] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:BCFTOOLS_STATS (test2)
+[15/582e89] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_COUNT (test2)
+[90/f5fd1b] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_QUAL (test2)
+[8e/ca0bb6] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_SUMMARY (test2)
+[6d/a88099] Submitted process > NFCORE_SAREK:SAREK:RECALIBRATE:MERGE_INDEX_CRAM:INDEX_CRAM (test4)
+[10/50e417] Submitted process > NFCORE_SAREK:SAREK:RECALIBRATE:MERGE_INDEX_CRAM:INDEX_CRAM (test8)
+[50/dd9251] Submitted process > NFCORE_SAREK:SAREK:RECALIBRATE:MERGE_INDEX_CRAM:INDEX_CRAM (test1)
+[e9/7d649d] Submitted process > NFCORE_SAREK:SAREK:RECALIBRATE:APPLYBQSR (test3)
+[46/bf2b0f] Submitted process > NFCORE_SAREK:SAREK:RECALIBRATE:MERGE_INDEX_CRAM:INDEX_CRAM (test7)
+[b4/39ff63] Submitted process > NFCORE_SAREK:SAREK:CRAM_QC:MOSDEPTH (test4)
+[8c/c5d6d2] Submitted process > NFCORE_SAREK:SAREK:CRAM_QC:SAMTOOLS_STATS (test4)
+[01/bba1bf] Submitted process > NFCORE_SAREK:SAREK:PAIR_VARIANT_CALLING:RUN_STRELKA_SOMATIC:STRELKA_SOMATIC (test4_vs_test2)
+[0e/0b672e] Submitted process > NFCORE_SAREK:SAREK:CRAM_QC:SAMTOOLS_STATS (test7)
+[22/e70f57] Submitted process > NFCORE_SAREK:SAREK:CRAM_QC:MOSDEPTH (test7)
+[b7/0dbbf4] Submitted process > NFCORE_SAREK:SAREK:GERMLINE_VARIANT_CALLING:RUN_STRELKA_SINGLE:STRELKA_SINGLE (test7)
+[72/922624] Submitted process > NFCORE_SAREK:SAREK:CRAM_QC:MOSDEPTH (test8)
+[11/65c904] Submitted process > NFCORE_SAREK:SAREK:CRAM_QC:SAMTOOLS_STATS (test8)
+[b6/31f343] Submitted process > NFCORE_SAREK:SAREK:GERMLINE_VARIANT_CALLING:RUN_STRELKA_SINGLE:STRELKA_SINGLE (test8)
+[00/9e6dd3] Submitted process > NFCORE_SAREK:SAREK:CRAM_QC:MOSDEPTH (test1)
+[de/bb80d0] Submitted process > NFCORE_SAREK:SAREK:CRAM_QC:SAMTOOLS_STATS (test1)
+[50/80b778] Submitted process > NFCORE_SAREK:SAREK:GERMLINE_VARIANT_CALLING:RUN_STRELKA_SINGLE:STRELKA_SINGLE (test1)
+[10/ea7747] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:BCFTOOLS_STATS (test4_vs_test2)
+[e1/b68f11] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_QUAL (test4_vs_test2)
+[44/b4fdf6] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_COUNT (test4_vs_test2)
+[6f/9936d7] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:BCFTOOLS_STATS (test4_vs_test2)
+[af/253b29] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_SUMMARY (test4_vs_test2)
+[34/479869] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_QUAL (test4_vs_test2)
+[1f/f1bcd5] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_COUNT (test4_vs_test2)
+[9d/bec57b] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_SUMMARY (test4_vs_test2)
+[e9/3b0111] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:BCFTOOLS_STATS (test7)
+[fc/33ee41] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_QUAL (test7)
+[c9/a269d8] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_COUNT (test7)
+[2d/d4a264] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_SUMMARY (test7)
+[5b/b14b87] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_SUMMARY (test8)
+[11/b4c654] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_QUAL (test8)
+[e9/727cfb] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_COUNT (test8)
+[fa/84ce0b] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:BCFTOOLS_STATS (test8)
+[9d/9be311] Submitted process > NFCORE_SAREK:SAREK:RECALIBRATE:MERGE_INDEX_CRAM:INDEX_CRAM (test3)
+[12/8c958a] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:BCFTOOLS_STATS (test1)
+[c8/9671c0] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_QUAL (test1)
+[82/0305c3] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_COUNT (test1)
+[3e/68a53a] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_SUMMARY (test1)
+[b2/e71ede] Submitted process > NFCORE_SAREK:SAREK:CRAM_QC:SAMTOOLS_STATS (test3)
+[e8/274795] Submitted process > NFCORE_SAREK:SAREK:CRAM_QC:MOSDEPTH (test3)
+[f5/1fa4d4] Submitted process > NFCORE_SAREK:SAREK:PAIR_VARIANT_CALLING:RUN_STRELKA_SOMATIC:STRELKA_SOMATIC (test3_vs_test1)
+[21/e73ea3] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:BCFTOOLS_STATS (test3_vs_test1)
+[52/e25cac] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:BCFTOOLS_STATS (test3_vs_test1)
+[3e/84a903] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_QUAL (test3_vs_test1)
+[ac/839068] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_SUMMARY (test3_vs_test1)
+[75/a2461c] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_SUMMARY (test3_vs_test1)
+[4f/f454d2] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_QUAL (test3_vs_test1)
+[14/2e8fce] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_COUNT (test3_vs_test1)
+[60/0cc6da] Submitted process > NFCORE_SAREK:SAREK:VCF_QC:VCFTOOLS_TSTV_COUNT (test3_vs_test1)
+[1b/fc8563] Submitted process > NFCORE_SAREK:SAREK:CUSTOM_DUMPSOFTWAREVERSIONS (1)
+[b7/0ad110] Submitted process > NFCORE_SAREK:SAREK:MULTIQC
+-[0;35m[nf-core/sarek][0;32m Pipeline completed successfully[0m-
+Pod running: grave-gates ... waiting for pod to stop running
+Pod grave-gates has changed from running state [terminated:[exitCode:0, reason:Completed, startedAt:2022-11-12T05:23:55Z, finishedAt:2022-11-12T05:58:49Z, containerID:docker://a0bbb1e6a87745869a9645152860258f57f87b91781befb3d2237b0ff6e2ec9d]]

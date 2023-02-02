@@ -1,0 +1,232 @@
+Launcher pod spec file: .nextflow.pod.yaml
+Pod submitted: agitated-pesquet .. waiting to start[2KPod started: agitated-pesquet
+mv: cannot move ‘/data/launch/nxf-tmp.vVeyNL’ to ‘.//usr/local/bin/nextflow’: No such file or directory
+N E X T F L O W  ~  version 22.09.7-edge
+Launching `/input/pipelines/ampliseq/main.nf` [agitated-pesquet] DSL2 - revision: be36b18b01
+
+WARN: Found unexpected parameters:
+* --save_reference: false
+- [2mIgnore this warning: params.schema_ignore_params = "save_reference" [0m
+
+
+
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/ampliseq v2.4.0[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName                   : [0;32magitated-pesquet[0m
+  [0;34mlaunchDir                 : [0;32m/data/launch[0m
+  [0;34mworkDir                   : [0;32m/data/work[0m
+  [0;34mprojectDir                : [0;32m/input/pipelines/ampliseq[0m
+  [0;34muserName                  : [0;32mroot[0m
+  [0;34mprofile                   : [0;32mtest[0m
+  [0;34mconfigFiles               : [0;32m/input/pipelines/ampliseq/nextflow.config, /data/launch/nextflow.config[0m
+
+[1mMain arguments[0m
+  [0;34minput                     : [0;32m/input/ampliseq/input.tsv[0m
+  [0;34mFW_primer                 : [0;32mGTGYCAGCMGCCGCGGTAA[0m
+  [0;34mRV_primer                 : [0;32mGGACTACNVGGGTWTCTAAT[0m
+  [0;34mmetadata                  : [0;32m/input/ampliseq/Metadata.tsv[0m
+  [0;34moutdir                    : [0;32m/data/output[0m
+
+[1mTaxonomic database[0m
+  [0;34mdada_ref_taxonomy         : [0;32mgtdb[0m
+  [0;34mcut_dada_ref_taxonomy     : [0;32mtrue[0m
+  [0;34mqiime_ref_taxonomy        : [0;32mgreengenes85[0m
+
+[1mASV filtering[0m
+  [0;34mmax_len_asv               : [0;32m255[0m
+  [0;34mmin_frequency             : [0;32m10[0m
+  [0;34mmin_samples               : [0;32m2[0m
+
+[1mDownstream analysis[0m
+  [0;34mqiime_adonis_formula      : [0;32mtreatment1[0m
+  [0;34msbdiexport                : [0;32mtrue[0m
+  [0;34mdada_tax_agglom_max       : [0;32m4[0m
+  [0;34mqiime_tax_agglom_max      : [0;32m4[0m
+
+[1mMax job request options[0m
+  [0;34mmax_cpus                  : [0;32m6[0m
+  [0;34mmax_memory                : [0;32m50 GB[0m
+  [0;34mmax_time                  : [0;32m6.h[0m
+
+[1mInstitutional config options[0m
+  [0;34mconfig_profile_name       : [0;32mTest profile[0m
+  [0;34mconfig_profile_description: [0;32mMinimal test dataset to check pipeline function[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use nf-core/ampliseq for your analysis please cite:
+
+* The pipeline publication
+  https://doi.org/10.3389/fmicb.2020.550420
+
+* The pipeline
+  https://doi.org/10.5281/zenodo.1493841
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/nf-core/ampliseq/blob/master/CITATIONS.md
+-[2m----------------------------------------------------[0m-
+WARN: No DADA2 cutoffs were specified (`--trunclenf` & `--trunclenr`), therefore reads will be truncated where median quality drops below 25 (defined by `--trunc_qmin`) but at least a fraction of 0.75 (defined by `--trunc_rmin`) of the reads will be retained.
+The chosen cutoffs do not account for required overlap for merging, therefore DADA2 might have poor merging efficiency or even fail.
+
+WARN: A process with name 'FORMAT_TAXRESULTS_ADDSP' is defined more than once in module script: /input/pipelines/ampliseq/./workflows/ampliseq.nf -- Make sure to not define the same function as process
+WARN: A process with name 'MERGE_STATS_FILTERTAXA' is defined more than once in module script: /input/pipelines/ampliseq/./workflows/ampliseq.nf -- Make sure to not define the same function as process
+WARN: A process with name 'DADA2_QUALITY2' is defined more than once in module script: /input/pipelines/ampliseq/./workflows/../subworkflows/local/dada2_preprocessing.nf -- Make sure to not define the same function as process
+WARN: A process with name 'CUTADAPT_SUMMARY_DOUBLEPRIMER' is defined more than once in module script: /input/pipelines/ampliseq/./workflows/../subworkflows/local/cutadapt_workflow.nf -- Make sure to not define the same function as process
+Use DADA2 taxonomy classification
+[29/64d612] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:RENAME_RAW_DATA_FILES (sampleID_1a)
+[27/2e4150] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:METADATA_PAIRWISE (Metadata.tsv)
+[e0/6c5e30] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:FORMAT_TAXONOMY
+[62/f0bf23] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_PREPTAX:FORMAT_TAXONOMY_QIIME
+[19/0f3708] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:RENAME_RAW_DATA_FILES (sampleID_1)
+[19/c96cb9] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:METADATA_ALL (Metadata.tsv)
+[64/501911] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:RENAME_RAW_DATA_FILES (sampleID_2a)
+[88/cdd500] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:RENAME_RAW_DATA_FILES (sampleID_2)
+[09/492ba6] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:RENAME_RAW_DATA_FILES (sampleID_1c)
+[c9/febc35] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:RENAME_RAW_DATA_FILES (sampleID_1b)
+[cd/bbf9de] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:RENAME_RAW_DATA_FILES (sampleID_2b)
+[99/d10657] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:RENAME_RAW_DATA_FILES (sampleID_2c)
+[12/1d8f84] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:RENAME_RAW_DATA_FILES (sampleID_1d)
+[1b/bfea49] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:RENAME_RAW_DATA_FILES (sampleID_1e)
+[e7/32d121] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:FASTQC (sampleID_1a)
+[9b/b7c098] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:CUTADAPT_WORKFLOW:CUTADAPT_BASIC (sampleID_1a)
+[ad/3c66de] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:CUTADAPT_TAXONOMY (assignTaxonomy)
+[5d/8eb85d] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_PREPTAX:QIIME2_EXTRACT (GTGYCAGCMGCCGCGGTAA-GGACTACNVGGGTWTCTAAT)
+[5e/a49ce8] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:FASTQC (sampleID_2a)
+[03/49aa82] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:CUTADAPT_WORKFLOW:CUTADAPT_BASIC (sampleID_2a)
+[58/e46bbe] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:CUTADAPT_WORKFLOW:CUTADAPT_BASIC (sampleID_2)
+[aa/0987fe] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:FASTQC (sampleID_2)
+[c0/7e5430] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:CUTADAPT_WORKFLOW:CUTADAPT_BASIC (sampleID_1c)
+[ea/cda352] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:FASTQC (sampleID_1c)
+[39/2d86f8] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:FASTQC (sampleID_2b)
+[2d/971432] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:CUTADAPT_WORKFLOW:CUTADAPT_BASIC (sampleID_2b)
+[2c/830c7f] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:CUTADAPT_WORKFLOW:CUTADAPT_BASIC (sampleID_1d)
+[76/3d5671] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:FASTQC (sampleID_1d)
+[b6/0932d9] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:CUTADAPT_WORKFLOW:CUTADAPT_BASIC (sampleID_2c)
+[5f/56dc47] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:FASTQC (sampleID_2c)
+[9b/a2b7a5] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:CUTADAPT_WORKFLOW:CUTADAPT_BASIC (sampleID_1)
+[41/fb2dc3] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:FASTQC (sampleID_1)
+[d1/7313a5] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:CUTADAPT_WORKFLOW:CUTADAPT_BASIC (sampleID_1b)
+[fe/b09709] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:FASTQC (sampleID_1b)
+[96/e0ab79] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:CUTADAPT_WORKFLOW:CUTADAPT_BASIC (sampleID_1e)
+[23/e92af6] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:FASTQC (sampleID_1e)
+[a0/e59bf3] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:CUTADAPT_WORKFLOW:CUTADAPT_SUMMARY (cutadapt_standard)
+[cc/902253] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:DADA2_QUALITY (FW)
+[0a/066522] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:DADA2_QUALITY (RV)
+[f1/14eacc] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:CUTADAPT_WORKFLOW:CUTADAPT_SUMMARY_MERGE (cutadapt_standard_summary.tsv)
+[af/14434d] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:TRUNCLEN (FW)
+[42/2c201b] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:TRUNCLEN (RV)
+[4a/26d157] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_PREPTAX:QIIME2_TRAIN (GTGYCAGCMGCCGCGGTAA-GGACTACNVGGGTWTCTAAT)
+WARN: Probably everything is fine, but this is a reminder that `--trunclenf` was set automatically to 230 and `--trunclenr` to 229. If this doesnt seem reasonable, then please change `--trunc_qmin` (and `--trunc_rmin`), or set `--trunclenf` and `--trunclenr` directly.
+[19/414ef7] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:DADA2_FILTNTRIM (sampleID_1a)
+[9c/1682c0] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:DADA2_FILTNTRIM (sampleID_2a)
+[67/19a211] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:DADA2_FILTNTRIM (sampleID_1c)
+[dc/7ebed1] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:DADA2_FILTNTRIM (sampleID_2b)
+[c1/4b724d] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:DADA2_FILTNTRIM (sampleID_1d)
+[be/122ed2] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:DADA2_FILTNTRIM (sampleID_2)
+[47/370fb3] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:DADA2_FILTNTRIM (sampleID_1)
+[7b/6d9c51] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:DADA2_FILTNTRIM (sampleID_2c)
+[9b/856a35] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:DADA2_FILTNTRIM (sampleID_1e)
+[fb/bfd474] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:DADA2_FILTNTRIM (sampleID_1b)
+[58/6e5027] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:DADA2_QUALITY2 (RV)
+[0e/65d83e] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_PREPROCESSING:DADA2_QUALITY2 (FW)
+[37/652af7] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_ERR (1)
+[58/311aaf] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_DENOISING (1)
+[f3/5f5552] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_RMCHIMERA (1)
+[42/928f48] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_STATS (1)
+[44/586403] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_MERGE
+[d8/0afd56] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:BARRNAP (ASV_seqs.fasta)
+[04/24a9b6] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:MERGE_STATS (1)
+[e6/bebbd2] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:FILTER_LEN_ASV (ASV_seqs.fasta)
+[42/82fe1e] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_INASV (ASV_table.len.tsv)
+[d2/96b43d] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_INSEQ (ASV_seqs.len.fasta)
+[6c/ebc152] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_TAXONOMY:QIIME2_INSEQ (ASV_seqs.len.fasta)
+[1c/13052a] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:MERGE_STATS_FILTERLENASV (1)
+[12/bb2ea8] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_TAXONOMY (ASV_seqs.len.fasta,assignTaxonomy.trim.fastq.gz)
+[b1/8a3b95] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_TAXONOMY:QIIME2_CLASSIFY (rep-seqs.qza,GTGYCAGCMGCCGCGGTAA-GGACTACNVGGGTWTCTAAT-classifier.qza)
+[4c/fce26a] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:DADA2_ADDSPECIES (ASV_tax.rds,addSpecies.fna)
+[20/62a90a] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_INTAX (ASV_tax_species.tsv)
+[97/9cc627] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:SBDIEXPORT (ASV_table.len.tsv,ASV_tax_species.tsv,Metadata.tsv)
+[2e/0ea578] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:SBDIEXPORTREANNOTATE (ASV_tax_species.tsv)
+[cc/e00309] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_FILTERTAXA (taxa:mitochondria,chloroplast;min-freq:10;min-samples:2)
+[b5/b34130] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_EXPORT:QIIME2_EXPORT_RELASV
+[55/e9b531] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_EXPORT:QIIME2_EXPORT_ABSOLUTE
+[c0/d57f24] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_EXPORT:QIIME2_EXPORT_RELTAX
+[fe/b47255] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_FILTERASV (mix8)
+[38/98961b] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_TREE
+[de/6a7f39] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_BARPLOT (1)
+[4d/3a3629] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:FILTER_STATS
+[32/0ea062] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_FILTERASV (treatment1)
+[9d/e6ff11] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_FILTERASV (bad9)
+[89/72a284] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_FILTERASV (badpairwise10)
+[5b/827a03] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_FILTERASV (materialSampleID)
+[d8/0192d7] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:MERGE_STATS_FILTERTAXA (1)
+[35/1eef06] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_TAX (treatment1 - taxonomic level: 3)
+[9f/925363] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_TAX (treatment1 - taxonomic level: 2)
+[c8/a767c3] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_ASV (treatment1)
+[df/51c3f9] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_TAX (treatment1 - taxonomic level: 4)
+[54/c97bc4] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:CUSTOM_DUMPSOFTWAREVERSIONS (1)
+[3c/a20e63] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_ASV (bad9)
+[10/8f5bae] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_TAX (bad9 - taxonomic level: 2)
+[06/ec5c81] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_TAX (bad9 - taxonomic level: 3)
+[a1/0d9620] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_TAX (bad9 - taxonomic level: 4)
+[84/7b9286] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_ASV (mix8)
+[68/c50a89] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_TAX (mix8 - taxonomic level: 2)
+[d7/e62fe5] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_TAX (mix8 - taxonomic level: 3)
+[30/805529] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_TAX (mix8 - taxonomic level: 4)
+[e8/09eecf] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_ASV (badpairwise10)
+[c6/7a5715] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_TAX (badpairwise10 - taxonomic level: 3)
+[78/aa584f] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_TAX (badpairwise10 - taxonomic level: 2)
+[72/29d789] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_TAX (badpairwise10 - taxonomic level: 4)
+[11/1e4b27] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_TAX (materialSampleID - taxonomic level: 3)
+[37/3b455e] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_ASV (materialSampleID)
+[fd/b68938] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_TAX (materialSampleID - taxonomic level: 2)
+[22/dfed86] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_ANCOM:QIIME2_ANCOM_TAX (materialSampleID - taxonomic level: 4)
+[6e/55f817] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:MULTIQC
+[bf/a2af77] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_ALPHARAREFACTION (1)
+[03/e01e74] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_CORE (1)
+[fe/aec90a] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_EXPORT:COMBINE_TABLE_QIIME2 (1)
+[a2/2f34b3] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_EXPORT:COMBINE_TABLE_DADA2
+WARN: QIIME2_DIVERSITY_CORE: The sampling depth of 966 seems too small for rarefaction
+[6c/ddeee7] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (bray_curtis_distance_matrix - mix8)
+[f4/8ba24c] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_ALPHA (faith_pd_vector)
+[3d/db32d6] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_ALPHA (evenness_vector)
+[75/03f735] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (bray_curtis_distance_matrix - treatment1)
+[ed/a9cbca] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETAORD (bray_curtis_pcoa_results)
+[87/7cdf8d] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETAORD (jaccard_pcoa_results)
+[67/2aaf57] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_ADONIS (jaccard_distance_matrix - treatment1)
+[77/154ce6] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_ADONIS (bray_curtis_distance_matrix - treatment1)
+[0e/4d577e] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (bray_curtis_distance_matrix - badpairwise10)
+[70/72cdc6] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_ALPHA (observed_features_vector)
+[2a/eae55a] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_ALPHA (shannon_vector)
+[21/425a96] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (bray_curtis_distance_matrix - bad9)
+[c0/184ca0] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETAORD (unweighted_unifrac_pcoa_results)
+[a9/2b6834] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETAORD (weighted_unifrac_pcoa_results)
+[33/9ff8bf] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_ADONIS (unweighted_unifrac_distance_matrix - treatment1)
+[9f/06c95c] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (bray_curtis_distance_matrix - materialSampleID)
+[74/257b98] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_ADONIS (weighted_unifrac_distance_matrix - treatment1)
+[c3/0482ba] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (jaccard_distance_matrix - treatment1)
+[ce/5771dd] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (jaccard_distance_matrix - mix8)
+[e9/12f618] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (jaccard_distance_matrix - bad9)
+[e7/392c28] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (jaccard_distance_matrix - badpairwise10)
+[3c/3ad601] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (jaccard_distance_matrix - materialSampleID)
+[bb/279a5c] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (unweighted_unifrac_distance_matrix - treatment1)
+[78/57c99d] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (unweighted_unifrac_distance_matrix - bad9)
+[4d/714bc7] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (unweighted_unifrac_distance_matrix - mix8)
+[99/129b92] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (unweighted_unifrac_distance_matrix - badpairwise10)
+[ea/c63955] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (unweighted_unifrac_distance_matrix - materialSampleID)
+[6f/5f5b27] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (weighted_unifrac_distance_matrix - treatment1)
+[56/299fd3] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (weighted_unifrac_distance_matrix - mix8)
+[76/d9687c] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (weighted_unifrac_distance_matrix - bad9)
+[f2/e9b8ac] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (weighted_unifrac_distance_matrix - badpairwise10)
+[02/154316] Submitted process > NFCORE_AMPLISEQ:AMPLISEQ:QIIME2_DIVERSITY:QIIME2_DIVERSITY_BETA (weighted_unifrac_distance_matrix - materialSampleID)
+-[0;35m[nf-core/ampliseq][0;32m Pipeline completed successfully[0m-

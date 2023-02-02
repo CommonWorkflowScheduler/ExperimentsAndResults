@@ -1,0 +1,13 @@
+sample,fastq_1,fastq_2,strandedness
+sample1,/input/rnaseq/data/SRR6357070_1.fastq.gz,/input/rnaseq/data/SRR6357070_2.fastq.gz,reverse
+sample2,/input/rnaseq/data/SRR6357071_1.fastq.gz,/input/rnaseq/data/SRR6357071_2.fastq.gz,reverse
+sample3,/input/rnaseq/data/SRR6357072_1.fastq.gz,,reverse
+sample4,/input/rnaseq/data/SRR6357073_1.fastq.gz,/input/rnaseq/data/SRR6357073_2.fastq.gz,reverse
+sample5,/input/rnaseq/data/SRR6357074_1.fastq.gz,,reverse
+sample6,/input/rnaseq/data/SRR6357075_1.fastq.gz,,reverse
+sample7,/input/rnaseq/data/SRR6357076_1.fastq.gz,/input/rnaseq/data/SRR6357076_2.fastq.gz,reverse
+sample8,/input/rnaseq/data/SRR6357077_1.fastq.gz,,reverse
+sample9,/input/rnaseq/data/SRR6357078_1.fastq.gz,/input/rnaseq/data/SRR6357078_2.fastq.gz,reverse
+sample10,/input/rnaseq/data/SRR6357079_1.fastq.gz,,reverse
+sample11,/input/rnaseq/data/SRR6357080_1.fastq.gz,/input/rnaseq/data/SRR6357080_2.fastq.gz,reverse
+sample12,/input/rnaseq/data/SRR6357081_1.fastq.gz,/input/rnaseq/data/SRR6357081_2.fastq.gz,reverse

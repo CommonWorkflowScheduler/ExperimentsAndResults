@@ -1,0 +1,1 @@
+commonworkflowscheduler/nextflow:v1.0

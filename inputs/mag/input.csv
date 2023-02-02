@@ -1,0 +1,13 @@
+sample,group,short_reads_1,short_reads_2,long_reads
+test_minigutA,0,/input/mag/data/test_minigut_R1.fastq.gz,/input/mag/data/test_minigut_R2.fastq.gz,
+test_minigut_sample2A,0,/input/mag/data/test_minigut_sample2_R1.fastq.gz,/input/mag/data/test_minigut_sample2_R2.fastq.gz,
+test_minigut_hg38hostA,0,/input/mag/data/test_minigut_hg38host_R1.fastq.gz,/input/mag/data/test_minigut_hg38host_R2.fastq.gz,
+test_minigut_sample2_hg38hostA,0,/input/mag/data/test_minigut_sample2_hg38host_R1.fastq.gz,/input/mag/data/test_minigut_sample2_hg38host_R2.fastq.gz,
+test_minigutB,0,/input/mag/data/test_minigut_R1.fastq.gz,/input/mag/data/test_minigut_R2.fastq.gz,
+test_minigut_sample2B,0,/input/mag/data/test_minigut_sample2_R1.fastq.gz,/input/mag/data/test_minigut_sample2_R2.fastq.gz,
+test_minigut_hg38hostB,0,/input/mag/data/test_minigut_hg38host_R1.fastq.gz,/input/mag/data/test_minigut_hg38host_R2.fastq.gz,
+test_minigut_sample2_hg38hostB,0,/input/mag/data/test_minigut_sample2_hg38host_R1.fastq.gz,/input/mag/data/test_minigut_sample2_hg38host_R2.fastq.gz,
+test_minigutC,0,/input/mag/data/test_minigut_R1.fastq.gz,/input/mag/data/test_minigut_R2.fastq.gz,
+test_minigut_sample2C,0,/input/mag/data/test_minigut_sample2_R1.fastq.gz,/input/mag/data/test_minigut_sample2_R2.fastq.gz,
+test_minigut_hg38hostC,0,/input/mag/data/test_minigut_hg38host_R1.fastq.gz,/input/mag/data/test_minigut_hg38host_R2.fastq.gz,
+test_minigut_sample2_hg38hostC,0,/input/mag/data/test_minigut_sample2_hg38host_R1.fastq.gz,/input/mag/data/test_minigut_sample2_hg38host_R2.fastq.gz,

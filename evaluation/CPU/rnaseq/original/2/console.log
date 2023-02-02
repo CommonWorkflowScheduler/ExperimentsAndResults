@@ -1,0 +1,535 @@
+Launcher pod spec file: .nextflow.pod.yaml
+Pod submitted: jolly-hilbert .. waiting to start[2KPod started: jolly-hilbert
+N E X T F L O W  ~  version 22.10.1
+Launching `/input/pipelines/rnaseq/main.nf` [jolly-hilbert] DSL2 - revision: 6b989c60f8
+
+
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/rnaseq v3.9[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName                   : [0;32mjolly-hilbert[0m
+  [0;34mlaunchDir                 : [0;32m/data/launch[0m
+  [0;34mworkDir                   : [0;32m/data/work[0m
+  [0;34mprojectDir                : [0;32m/input/pipelines/rnaseq[0m
+  [0;34muserName                  : [0;32mroot[0m
+  [0;34mprofile                   : [0;32mtest[0m
+  [0;34mconfigFiles               : [0;32m/input/pipelines/rnaseq/nextflow.config, /data/launch/nextflow.config[0m
+
+[1mInput/output options[0m
+  [0;34minput                     : [0;32m/input/rnaseq/samplesheet_test.csv[0m
+  [0;34moutdir                    : [0;32m/data/output/[0m
+
+[1mUMI options[0m
+  [0;34mumitools_bc_pattern       : [0;32mNNNN[0m
+  [0;34mumitools_bc_pattern2      : [0;32mnull[0m
+  [0;34mumitools_umi_separator    : [0;32mnull[0m
+
+[1mRead filtering options[0m
+  [0;34mbbsplit_fasta_list        : [0;32m/input/rnaseq/reference/bbsplit_fasta_list.txt[0m
+  [0;34mskip_bbsplit              : [0;32mfalse[0m
+
+[1mReference genome options[0m
+  [0;34mfasta                     : [0;32m/input/rnaseq/reference/genome.fasta[0m
+  [0;34mgtf                       : [0;32m/input/rnaseq/reference/genes.gtf.gz[0m
+  [0;34mgff                       : [0;32m/input/rnaseq/reference/genes.gff.gz[0m
+  [0;34mtranscript_fasta          : [0;32m/input/rnaseq/reference/transcriptome.fasta[0m
+  [0;34madditional_fasta          : [0;32m/input/rnaseq/reference/gfp.fa.gz[0m
+  [0;34mhisat2_index              : [0;32m/input/rnaseq/reference/hisat2.tar.gz[0m
+  [0;34mrsem_index                : [0;32m/input/rnaseq/reference/rsem.tar.gz[0m
+  [0;34msalmon_index              : [0;32m/input/rnaseq/reference/salmon.tar.gz[0m
+
+[1mAlignment options[0m
+  [0;34mpseudo_aligner            : [0;32msalmon[0m
+
+[1mInstitutional config options[0m
+  [0;34mconfig_profile_name       : [0;32mTest profile[0m
+  [0;34mconfig_profile_description: [0;32mMinimal test dataset to check pipeline function[0m
+
+[1mMax job request options[0m
+  [0;34mmax_cpus                  : [0;32m6[0m
+  [0;34mmax_memory                : [0;32m50 GB[0m
+  [0;34mmax_time                  : [0;32m6.h[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use nf-core/rnaseq for your analysis please cite:
+
+* The pipeline
+  https://doi.org/10.5281/zenodo.1400710
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/nf-core/rnaseq/blob/master/CITATIONS.md
+-[2m----------------------------------------------------[0m-
+WARN: =============================================================================
+  Both '--gtf' and '--gff' parameters have been provided.
+  Using GTF file as priority.
+===================================================================================
+WARN: =============================================================================
+  '--transcript_fasta' parameter has been provided.
+  Make sure transcript names in this file match those in the GFF/GTF file.
+
+  Please see:
+  https://github.com/nf-core/rnaseq/issues/753
+===================================================================================
+[9d/8a02a7] Submitted process > NFCORE_RNASEQ:RNASEQ:PREPARE_GENOME:UNTAR_SALMON_INDEX (salmon.tar.gz)
+[d4/0cef49] Submitted process > NFCORE_RNASEQ:RNASEQ:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet_test.csv)
+[c2/0f9dd0] Submitted process > NFCORE_RNASEQ:RNASEQ:PREPARE_GENOME:GUNZIP_GTF (genes.gtf.gz)
+[26/61b43f] Submitted process > NFCORE_RNASEQ:RNASEQ:PREPARE_GENOME:GUNZIP_ADDITIONAL_FASTA (gfp.fa.gz)
+[48/784cd9] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:FASTQC (sample10)
+[30/a76ed7] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:FASTQC (sample1)
+[6a/907535] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:FASTQC (sample11)
+[06/380c20] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:FASTQC (sample12)
+[5d/0854fe] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:FASTQC (sample3)
+[b5/b0d696] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:FASTQC (sample2)
+[93/970a1d] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:FASTQC (sample4)
+[4a/d23c90] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:FASTQC (sample5)
+[5c/63cbc6] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:FASTQC (sample6)
+[43/1ab699] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (sample10)
+[a7/0fafa7] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (sample1)
+[4d/3e7267] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:FASTQC (sample8)
+[66/f5819a] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:FASTQC (sample7)
+[c2/713687] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (sample11)
+[61/84c5bb] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:FASTQC (sample9)
+[1d/61456e] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (sample12)
+[4f/627559] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (sample2)
+[81/d807a0] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (sample4)
+[d0/cf8f69] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (sample3)
+[3a/c4f34f] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (sample5)
+[3d/01cc9b] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (sample6)
+[12/ac69b1] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (sample7)
+[ae/af3151] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (sample8)
+[28/e94e65] Submitted process > NFCORE_RNASEQ:RNASEQ:FASTQC_UMITOOLS_TRIMGALORE:TRIMGALORE (sample9)
+[12/16a0e0] Submitted process > NFCORE_RNASEQ:RNASEQ:PREPARE_GENOME:CAT_ADDITIONAL_FASTA (gfp.fa)
+WARN: K8s pod cannot be scheduled -- 0/8 nodes are available: 4 Insufficient memory, 4 node(s) didn't match Pod's node affinity/selector.
+[ba/99cf9b] Submitted process > NFCORE_RNASEQ:RNASEQ:PREPARE_GENOME:CUSTOM_GETCHROMSIZES (genome_gfp.fasta)
+[2a/2bb742] Submitted process > NFCORE_RNASEQ:RNASEQ:PREPARE_GENOME:GTF2BED (genome_gfp.gtf)
+[42/3a39e3] Submitted process > NFCORE_RNASEQ:RNASEQ:PREPARE_GENOME:BBMAP_BBSPLIT
+[8c/7a3495] Submitted process > NFCORE_RNASEQ:RNASEQ:PREPARE_GENOME:STAR_GENOMEGENERATE (genome_gfp.fasta)
+[ae/ee0997] Submitted process > NFCORE_RNASEQ:RNASEQ:BBMAP_BBSPLIT (1)
+[c9/632d80] Submitted process > NFCORE_RNASEQ:RNASEQ:BBMAP_BBSPLIT (2)
+[80/1b52ed] Submitted process > NFCORE_RNASEQ:RNASEQ:BBMAP_BBSPLIT (4)
+[f5/c8ea68] Submitted process > NFCORE_RNASEQ:RNASEQ:BBMAP_BBSPLIT (3)
+[a7/1beb75] Submitted process > NFCORE_RNASEQ:RNASEQ:BBMAP_BBSPLIT (5)
+[75/585094] Submitted process > NFCORE_RNASEQ:RNASEQ:BBMAP_BBSPLIT (6)
+[b1/2885a5] Submitted process > NFCORE_RNASEQ:RNASEQ:BBMAP_BBSPLIT (7)
+[86/5ee321] Submitted process > NFCORE_RNASEQ:RNASEQ:BBMAP_BBSPLIT (8)
+[f2/00795b] Submitted process > NFCORE_RNASEQ:RNASEQ:BBMAP_BBSPLIT (9)
+[8c/100764] Submitted process > NFCORE_RNASEQ:RNASEQ:BBMAP_BBSPLIT (10)
+[eb/542a38] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_QUANT (sample10)
+[ae/293585] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN (sample10)
+[ad/1eb244] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN (sample1)
+[53/c60d22] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_QUANT (sample1)
+[80/02c7a7] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN (sample5)
+[30/f1d5cb] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_QUANT (sample5)
+[3a/d9862d] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_QUANT (sample11)
+[d7/04b6aa] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN (sample11)
+[f5/ebb09a] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN (sample6)
+[55/cfe23f] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_QUANT (sample6)
+[c1/80072e] Submitted process > NFCORE_RNASEQ:RNASEQ:BBMAP_BBSPLIT (11)
+[d0/b54ad8] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN (sample12)
+[0e/c672d0] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_QUANT (sample12)
+[d7/da554a] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_QUANT (sample2)
+[6b/f77f58] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN (sample2)
+WARN: K8s pod cannot be scheduled -- 0/8 nodes are available: 4 Insufficient memory, 4 node(s) didn't match Pod's node affinity/selector.
+[6b/724838] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN (sample8)
+[0d/9a4cc4] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_QUANT (sample8)
+[f4/f8317a] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_SORT (sample10)
+[0f/ee0632] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_QUANT (sample10)
+[3c/b21d74] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN (sample4)
+[18/2befbc] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_QUANT (sample4)
+[56/3ea64f] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_QUANT (sample7)
+[a0/ed8024] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN (sample7)
+[1d/f3a330] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_QUANT (sample5)
+[c8/e5d3c4] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_SORT (sample5)
+[c2/b0b28e] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_INDEX (sample10)
+[14/32d721] Submitted process > NFCORE_RNASEQ:RNASEQ:PRESEQ_LCEXTRAP (sample10)
+[43/61b73b] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:PICARD_MARKDUPLICATES (sample10)
+[2b/e16d30] Submitted process > NFCORE_RNASEQ:RNASEQ:PRESEQ_LCEXTRAP (sample5)
+[55/f7333f] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:PICARD_MARKDUPLICATES (sample5)
+[7c/d9b3da] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_INDEX (sample5)
+[81/55ea63] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_SORT (sample8)
+[d6/eebc22] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_QUANT (sample8)
+[28/a9d51e] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_BAMSTAT (sample10)
+[3c/d17705] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONANNOTATION (sample10)
+[75/193d55] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONSATURATION (sample10)
+[42/7f7c58] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INNERDISTANCE (sample10)
+[e9/2739b2] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDISTRIBUTION (sample10)
+[fc/4f36ab] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INFEREXPERIMENT (sample10)
+[ed/92026c] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV (sample10)
+[59/d2d9e7] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:SAMTOOLS_INDEX (sample10)
+[df/3573fa] Submitted process > NFCORE_RNASEQ:RNASEQ:QUALIMAP_RNASEQ (sample10)
+[4b/7b2278] Submitted process > NFCORE_RNASEQ:RNASEQ:DUPRADAR (sample10)
+[b9/f18c1f] Submitted process > NFCORE_RNASEQ:RNASEQ:STRINGTIE_STRINGTIE (sample10)
+[9b/95d02e] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDUPLICATION (sample10)
+[e3/49aa47] Submitted process > NFCORE_RNASEQ:RNASEQ:SUBREAD_FEATURECOUNTS (sample10)
+[3c/3317db] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:PICARD_MARKDUPLICATES (sample8)
+[2e/7c6a0a] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_INDEX (sample8)
+[e0/ab9dde] Submitted process > NFCORE_RNASEQ:RNASEQ:PRESEQ_LCEXTRAP (sample8)
+[0a/2330d7] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV (sample5)
+[df/0cae51] Submitted process > NFCORE_RNASEQ:RNASEQ:DUPRADAR (sample5)
+[0d/d7a66f] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_BAMSTAT (sample5)
+[4d/effe62] Submitted process > NFCORE_RNASEQ:RNASEQ:STRINGTIE_STRINGTIE (sample5)
+[4e/4fbf93] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDUPLICATION (sample5)
+[e7/53a203] Submitted process > NFCORE_RNASEQ:RNASEQ:SUBREAD_FEATURECOUNTS (sample5)
+[99/0b22b0] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONSATURATION (sample5)
+[58/af2340] Submitted process > NFCORE_RNASEQ:RNASEQ:QUALIMAP_RNASEQ (sample5)
+[5d/7679c9] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDISTRIBUTION (sample5)
+[15/fec421] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INNERDISTANCE (sample5)
+[32/e04df5] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:SAMTOOLS_INDEX (sample5)
+[11/bc4a8e] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONANNOTATION (sample5)
+[72/bb4a2c] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INFEREXPERIMENT (sample5)
+[36/27e277] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_QUANT (sample3)
+[91/354163] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN (sample3)
+[0c/f0bc5a] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDCLIP (sample5)
+WARN: K8s pod cannot be scheduled -- 0/8 nodes are available: 4 Insufficient memory, 4 node(s) didn't match Pod's node affinity/selector.
+[00/04c48a] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDCLIP (sample5)
+[7d/c56d55] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG (sample5)
+[8d/b7a2d7] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_SORT (sample3)
+[9f/4db4bb] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_QUANT (sample3)
+[9e/07560d] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG (sample5)
+[b4/a33895] Submitted process > NFCORE_RNASEQ:RNASEQ:BBMAP_BBSPLIT (12)
+[96/bd3bcb] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_SORT (sample12)
+[d9/0237d2] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_QUANT (sample12)
+[fd/629083] Submitted process > NFCORE_RNASEQ:RNASEQ:PRESEQ_LCEXTRAP (sample3)
+[e4/e4991e] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_INDEX (sample3)
+[9c/89dcb1] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:PICARD_MARKDUPLICATES (sample3)
+[b4/99e007] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:PICARD_MARKDUPLICATES (sample12)
+[23/466805] Submitted process > NFCORE_RNASEQ:RNASEQ:PRESEQ_LCEXTRAP (sample12)
+[7e/71072d] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_INDEX (sample12)
+[91/3dac5f] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_SORT (sample1)
+[18/95fbbd] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_QUANT (sample1)
+[9b/c9e7ac] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_QUANT (sample2)
+[de/360993] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_SORT (sample2)
+[6f/81393b] Submitted process > NFCORE_RNASEQ:RNASEQ:MULTIQC_CUSTOM_BIOTYPE (sample5)
+[48/4d4b9f] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDUPLICATION (sample3)
+[4e/a8931a] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONSATURATION (sample3)
+[60/d0da7d] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INFEREXPERIMENT (sample3)
+[40/0a15c6] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_BAMSTAT (sample3)
+[1b/82be26] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV (sample3)
+[a2/6d761e] Submitted process > NFCORE_RNASEQ:RNASEQ:STRINGTIE_STRINGTIE (sample3)
+[19/0f3f00] Submitted process > NFCORE_RNASEQ:RNASEQ:DUPRADAR (sample3)
+[24/58d8d7] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDISTRIBUTION (sample3)
+[2e/3363b1] Submitted process > NFCORE_RNASEQ:RNASEQ:QUALIMAP_RNASEQ (sample3)
+[2b/a380b0] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INNERDISTANCE (sample3)
+[fb/705eed] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:SAMTOOLS_INDEX (sample3)
+[dd/a9d747] Submitted process > NFCORE_RNASEQ:RNASEQ:SUBREAD_FEATURECOUNTS (sample3)
+[0b/39162d] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONANNOTATION (sample3)
+[dc/534d0a] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_SORT (sample6)
+[52/e92bc6] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_QUANT (sample6)
+[47/165934] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_SORT (sample4)
+[30/ae9270] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_QUANT (sample4)
+[4e/ef0d8d] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_QUANT (sample9)
+[d4/ddbd19] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN (sample9)
+[2a/961dbb] Submitted process > NFCORE_RNASEQ:RNASEQ:DUPRADAR (sample12)
+[ed/acc21f] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INFEREXPERIMENT (sample12)
+[b1/e69e2b] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INNERDISTANCE (sample12)
+[af/6a0048] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV (sample12)
+[ca/0c2bed] Submitted process > NFCORE_RNASEQ:RNASEQ:SUBREAD_FEATURECOUNTS (sample12)
+[3b/1c698a] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDUPLICATION (sample12)
+[8a/6de7e5] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDISTRIBUTION (sample12)
+[25/ea71b8] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONANNOTATION (sample12)
+[29/9de597] Submitted process > NFCORE_RNASEQ:RNASEQ:STRINGTIE_STRINGTIE (sample12)
+[5b/754b94] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:SAMTOOLS_INDEX (sample12)
+[db/901201] Submitted process > NFCORE_RNASEQ:RNASEQ:QUALIMAP_RNASEQ (sample12)
+[c0/ce48c1] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_BAMSTAT (sample12)
+[65/48109a] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONSATURATION (sample12)
+[e7/0ec9e1] Submitted process > NFCORE_RNASEQ:RNASEQ:PRESEQ_LCEXTRAP (sample1)
+[ce/f691f5] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_INDEX (sample1)
+[d7/9f19e1] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:PICARD_MARKDUPLICATES (sample1)
+[56/6258dc] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_INDEX (sample4)
+[87/6cf1e5] Submitted process > NFCORE_RNASEQ:RNASEQ:PRESEQ_LCEXTRAP (sample4)
+[eb/50d1ea] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:PICARD_MARKDUPLICATES (sample4)
+[fb/c8e5e8] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_SORT (sample7)
+[8c/231fd2] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_QUANT (sample7)
+[91/3aa319] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_TX2GENE (genome_gfp.gtf)
+WARN: K8s pod cannot be scheduled -- 0/8 nodes are available: 4 Insufficient memory, 4 node(s) didn't match Pod's node affinity/selector.
+[dd/08c613] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_INDEX (sample6)
+[64/611523] Submitted process > NFCORE_RNASEQ:RNASEQ:PRESEQ_LCEXTRAP (sample6)
+[7f/d934e0] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:PICARD_MARKDUPLICATES (sample6)
+[90/7c3892] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDCLIP (sample12)
+[d0/38e6f9] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDCLIP (sample12)
+[6e/06a915] Submitted process > NFCORE_RNASEQ:RNASEQ:PRESEQ_LCEXTRAP (sample7)
+[80/0d7c88] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:PICARD_MARKDUPLICATES (sample7)
+[84/bdf17e] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_INDEX (sample7)
+[43/c4805c] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV (sample4)
+[5b/0d55ed] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDISTRIBUTION (sample4)
+[a0/5ccbbe] Submitted process > NFCORE_RNASEQ:RNASEQ:DUPRADAR (sample4)
+[2e/a29cb5] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_BAMSTAT (sample4)
+[9b/fc1fa3] Submitted process > NFCORE_RNASEQ:RNASEQ:STRINGTIE_STRINGTIE (sample4)
+[02/3b4641] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONANNOTATION (sample4)
+[d4/4d78ae] Submitted process > NFCORE_RNASEQ:RNASEQ:SUBREAD_FEATURECOUNTS (sample4)
+[d1/0c0326] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDUPLICATION (sample4)
+[cf/10762f] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INNERDISTANCE (sample4)
+[21/de376a] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INFEREXPERIMENT (sample4)
+[79/9ba4ab] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONSATURATION (sample4)
+[b7/6592cd] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:SAMTOOLS_INDEX (sample4)
+[c5/b86046] Submitted process > NFCORE_RNASEQ:RNASEQ:QUALIMAP_RNASEQ (sample4)
+[da/dba777] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_TXIMPORT
+[4e/17494c] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG (sample12)
+[21/c2f34a] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONANNOTATION (sample6)
+[18/8b7b9d] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_BAMSTAT (sample6)
+[7f/ad4a60] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDISTRIBUTION (sample6)
+[d6/c70e76] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONSATURATION (sample6)
+[0f/8060ce] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV (sample6)
+[36/789d19] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INNERDISTANCE (sample6)
+[65/df9c05] Submitted process > NFCORE_RNASEQ:RNASEQ:STRINGTIE_STRINGTIE (sample6)
+[49/5077aa] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INFEREXPERIMENT (sample6)
+[ed/f8c7de] Submitted process > NFCORE_RNASEQ:RNASEQ:DUPRADAR (sample6)
+[c9/ae8835] Submitted process > NFCORE_RNASEQ:RNASEQ:QUALIMAP_RNASEQ (sample6)
+[cd/ebdc3d] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDUPLICATION (sample6)
+[ac/046925] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:SAMTOOLS_INDEX (sample6)
+[22/6f546d] Submitted process > NFCORE_RNASEQ:RNASEQ:SUBREAD_FEATURECOUNTS (sample6)
+[61/65d371] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV (sample7)
+[a2/967dc8] Submitted process > NFCORE_RNASEQ:RNASEQ:DUPRADAR (sample7)
+[06/f0c440] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONSATURATION (sample7)
+[5c/ee1e3f] Submitted process > NFCORE_RNASEQ:RNASEQ:STRINGTIE_STRINGTIE (sample7)
+[52/508bea] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INFEREXPERIMENT (sample7)
+[c1/8bad57] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONANNOTATION (sample7)
+[9d/0c34fe] Submitted process > NFCORE_RNASEQ:RNASEQ:QUALIMAP_RNASEQ (sample7)
+[bb/7d2987] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INNERDISTANCE (sample7)
+[be/5280cd] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDUPLICATION (sample7)
+[d8/104d68] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:SAMTOOLS_INDEX (sample7)
+[cb/c36394] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_BAMSTAT (sample7)
+[f3/390709] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDISTRIBUTION (sample7)
+[cf/60b9d0] Submitted process > NFCORE_RNASEQ:RNASEQ:SUBREAD_FEATURECOUNTS (sample7)
+[99/b6a85a] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDCLIP (sample4)
+[ee/7208f0] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDCLIP (sample4)
+[cb/a8702c] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_SORT (sample11)
+[1a/aa5a1d] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_QUANT (sample11)
+[dd/edc17e] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDCLIP (sample6)
+[10/6938e7] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDCLIP (sample6)
+[72/d6f04c] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDCLIP (sample3)
+[68/8d9f16] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDCLIP (sample3)
+[6f/dc9412] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDISTRIBUTION (sample1)
+[38/682de3] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_BAMSTAT (sample1)
+[3b/1b73c7] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:SAMTOOLS_INDEX (sample1)
+[89/52897e] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV (sample1)
+[4c/44b206] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDUPLICATION (sample1)
+[77/67b353] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONSATURATION (sample1)
+[5e/4c4922] Submitted process > NFCORE_RNASEQ:RNASEQ:QUALIMAP_RNASEQ (sample1)
+[a6/219e30] Submitted process > NFCORE_RNASEQ:RNASEQ:STRINGTIE_STRINGTIE (sample1)
+[05/ba162d] Submitted process > NFCORE_RNASEQ:RNASEQ:DUPRADAR (sample1)
+[e1/3cd388] Submitted process > NFCORE_RNASEQ:RNASEQ:SUBREAD_FEATURECOUNTS (sample1)
+[a4/8d58c0] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONANNOTATION (sample1)
+[39/147843] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INNERDISTANCE (sample1)
+[1c/7ad306] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INFEREXPERIMENT (sample1)
+[1c/0c90d0] Submitted process > NFCORE_RNASEQ:RNASEQ:MULTIQC_CUSTOM_BIOTYPE (sample4)
+[4a/4fbf99] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG (sample4)
+[9b/f2e300] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG (sample4)
+[3f/f7d00f] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG (sample6)
+[24/1d956a] Submitted process > NFCORE_RNASEQ:RNASEQ:PRESEQ_LCEXTRAP (sample11)
+[29/cbb5de] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_INDEX (sample11)
+[08/05af44] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:PICARD_MARKDUPLICATES (sample11)
+[f0/0ddc1f] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG (sample6)
+[e2/3ed329] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG (sample3)
+[6e/da56c4] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG (sample3)
+WARN: K8s pod cannot be scheduled -- 0/8 nodes are available: 4 Insufficient memory, 4 node(s) didn't match Pod's node affinity/selector.
+[f1/2c2c67] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_SORT (sample9)
+[a5/edabdf] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_QUANT (sample9)
+[77/ee1c98] Submitted process > NFCORE_RNASEQ:RNASEQ:MULTIQC_CUSTOM_BIOTYPE (sample6)
+[e0/f2f6f9] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDCLIP (sample7)
+[fb/4fef6f] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDCLIP (sample7)
+[89/1eda14] Submitted process > NFCORE_RNASEQ:RNASEQ:SUBREAD_FEATURECOUNTS (sample11)
+[fb/80b376] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:SAMTOOLS_INDEX (sample11)
+[c5/5fc4c6] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_BAMSTAT (sample11)
+[7e/a51b9d] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONANNOTATION (sample11)
+[86/383ec3] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDUPLICATION (sample11)
+[19/d780ff] Submitted process > NFCORE_RNASEQ:RNASEQ:STRINGTIE_STRINGTIE (sample11)
+[39/f83a49] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV (sample11)
+[0a/034985] Submitted process > NFCORE_RNASEQ:RNASEQ:DUPRADAR (sample11)
+[67/1addae] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INFEREXPERIMENT (sample11)
+[09/94926d] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONSATURATION (sample11)
+[fa/a56172] Submitted process > NFCORE_RNASEQ:RNASEQ:QUALIMAP_RNASEQ (sample11)
+[b2/13fea2] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INNERDISTANCE (sample11)
+[7b/c48f50] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDISTRIBUTION (sample11)
+[0c/9cb95e] Submitted process > NFCORE_RNASEQ:RNASEQ:MULTIQC_CUSTOM_BIOTYPE (sample3)
+[0b/071a9f] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDCLIP (sample10)
+[3a/a9c99f] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDCLIP (sample10)
+[db/db44a8] Submitted process > NFCORE_RNASEQ:RNASEQ:PRESEQ_LCEXTRAP (sample9)
+[e2/455285] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:PICARD_MARKDUPLICATES (sample9)
+[91/3d28fc] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_INDEX (sample9)
+[6e/af2f90] Submitted process > NFCORE_RNASEQ:RNASEQ:MULTIQC_CUSTOM_BIOTYPE (sample11)
+[b6/cd71e5] Submitted process > NFCORE_RNASEQ:RNASEQ:MULTIQC_CUSTOM_BIOTYPE (sample12)
+[32/c53477] Submitted process > NFCORE_RNASEQ:RNASEQ:MULTIQC_CUSTOM_BIOTYPE (sample10)
+[f6/cf1520] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG (sample7)
+[d9/093664] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG (sample7)
+[67/e6c3de] Submitted process > NFCORE_RNASEQ:RNASEQ:PRESEQ_LCEXTRAP (sample2)
+[1b/1654b3] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:PICARD_MARKDUPLICATES (sample2)
+[dc/b6c0d4] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:SAMTOOLS_INDEX (sample2)
+[58/9ba1e6] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG (sample12)
+[e3/4a30dd] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INFEREXPERIMENT (sample9)
+[60/15af80] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV (sample9)
+[bd/c4a516] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_BAMSTAT (sample9)
+[16/145246] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDISTRIBUTION (sample9)
+[4c/3001b3] Submitted process > NFCORE_RNASEQ:RNASEQ:DUPRADAR (sample9)
+[fd/54879a] Submitted process > NFCORE_RNASEQ:RNASEQ:SUBREAD_FEATURECOUNTS (sample9)
+[73/9b80af] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:SAMTOOLS_INDEX (sample9)
+[48/1465be] Submitted process > NFCORE_RNASEQ:RNASEQ:QUALIMAP_RNASEQ (sample9)
+[9c/74c2db] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDUPLICATION (sample9)
+[6e/f51c84] Submitted process > NFCORE_RNASEQ:RNASEQ:STRINGTIE_STRINGTIE (sample9)
+[46/bbdb0d] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONSATURATION (sample9)
+[3c/2f1ca5] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONANNOTATION (sample9)
+[9a/255e82] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INNERDISTANCE (sample9)
+WARN: K8s pod cannot be scheduled -- 0/8 nodes are available: 4 Insufficient memory, 4 node(s) didn't match Pod's node affinity/selector.
+[08/1c1e88] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDUPLICATION (sample8)
+[9e/3de5fb] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV (sample8)
+[02/d4e88c] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONANNOTATION (sample8)
+[30/2e9f21] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONSATURATION (sample8)
+[a4/5f0f0f] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INNERDISTANCE (sample8)
+[5e/54b633] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INFEREXPERIMENT (sample8)
+[49/027779] Submitted process > NFCORE_RNASEQ:RNASEQ:QUALIMAP_RNASEQ (sample8)
+[a7/de651c] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDISTRIBUTION (sample8)
+[cf/bce0a1] Submitted process > NFCORE_RNASEQ:RNASEQ:SUBREAD_FEATURECOUNTS (sample8)
+[43/45d323] Submitted process > NFCORE_RNASEQ:RNASEQ:STRINGTIE_STRINGTIE (sample8)
+[3e/c8888b] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:SAMTOOLS_INDEX (sample8)
+[6d/fafb59] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_BAMSTAT (sample8)
+[94/3e986d] Submitted process > NFCORE_RNASEQ:RNASEQ:DUPRADAR (sample8)
+[44/e2bf39] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_TX2GENE (genome_gfp.gtf)
+[40/767c37] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDCLIP (sample11)
+[d4/a17485] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDCLIP (sample11)
+[43/482307] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_BAMSTAT (sample2)
+[87/e6a5cb] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INNERDISTANCE (sample2)
+[02/21712d] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDISTRIBUTION (sample2)
+[db/411536] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONANNOTATION (sample2)
+[aa/a892f8] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_INFEREXPERIMENT (sample2)
+[47/78e2b0] Submitted process > NFCORE_RNASEQ:RNASEQ:DUPRADAR (sample2)
+[f1/919cd0] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_JUNCTIONSATURATION (sample2)
+[76/26b205] Submitted process > NFCORE_RNASEQ:RNASEQ:RSEQC:RSEQC_READDUPLICATION (sample2)
+[b3/517ae8] Submitted process > NFCORE_RNASEQ:RNASEQ:STRINGTIE_STRINGTIE (sample2)
+[03/7bb9ba] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDTOOLS_GENOMECOV (sample2)
+[e6/b2be33] Submitted process > NFCORE_RNASEQ:RNASEQ:QUALIMAP_RNASEQ (sample2)
+[01/0f1c15] Submitted process > NFCORE_RNASEQ:RNASEQ:SUBREAD_FEATURECOUNTS (sample2)
+[ab/9f4701] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:SAMTOOLS_INDEX (sample2)
+[bd/3eaa4b] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample5)
+[bb/f07a11] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample5)
+[e3/069c02] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample10)
+[70/b2d13a] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample5)
+[90/ec73d6] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample10)
+[91/a18995] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample10)
+[eb/3fbb30] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample8)
+[49/eb688f] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample8)
+[07/29bfbd] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample3)
+[4c/2e7a30] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample8)
+[31/3092ca] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample3)
+[be/d3205b] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample3)
+[79/a8becd] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample1)
+[5a/f3a4ec] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample12)
+[63/3b1c31] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample12)
+[c8/d47144] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample1)
+[a3/b658e2] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample12)
+[65/59c1a0] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample1)
+[6b/ae0d79] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample4)
+[3f/ca8d6d] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample4)
+[cc/203e11] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample4)
+[63/e9d11c] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample6)
+[78/2bea15] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample6)
+[e9/686df0] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample6)
+[63/5e7730] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample7)
+[a4/68652b] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample7)
+[bb/6477c7] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample7)
+[90/1c7457] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample11)
+[c9/283bd5] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample11)
+[60/dd5cb3] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample11)
+[f3/a41483] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample9)
+[b1/45db25] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample9)
+[da/8f4ec5] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample9)
+[f7/c242b3] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample2)
+[16/e31417] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample2)
+[44/ad6327] Submitted process > NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:BAM_SORT_SAMTOOLS:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample2)
+[7e/1cc188] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDCLIP (sample9)
+[a5/141225] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDCLIP (sample9)
+[4c/a372ba] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDCLIP (sample8)
+[99/c1a44a] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDCLIP (sample8)
+[a5/35ae54] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_TXIMPORT
+[b6/17c611] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG (sample8)
+[4d/a011fa] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_SE_GENE (salmon_tx2gene.tsv)
+[a8/14cd18] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_SE_GENE_SCALED (salmon_tx2gene.tsv)
+[80/a2931d] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_SE_GENE_LENGTH_SCALED (salmon_tx2gene.tsv)
+[88/d20ef2] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_SALMON:SALMON_SE_TRANSCRIPT (salmon_tx2gene.tsv)
+[ee/a552ff] Submitted process > NFCORE_RNASEQ:RNASEQ:DESEQ2_QC_SALMON
+[50/e6f276] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample10)
+[11/064fb1] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample5)
+[26/b8728d] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample10)
+[30/a18db8] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample10)
+[99/697d98] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample5)
+[e9/fced3d] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample5)
+[08/5e2e0d] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample12)
+[7b/d3b04c] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample3)
+[7f/17c42c] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample12)
+[90/07d4c9] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample12)
+[e0/d24712] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample3)
+[0f/45f056] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample3)
+[6f/aab577] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample4)
+[fd/2cd7a6] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample4)
+[c8/ede12a] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample4)
+[53/83cc22] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample6)
+[1f/0894f4] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample6)
+[db/36440b] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample7)
+[62/002166] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample7)
+[57/457a1b] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample7)
+[33/f6f6c6] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample6)
+[36/17e99f] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample1)
+[82/3a8732] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample1)
+[30/41cd3b] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample1)
+[50/9e5cfc] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample11)
+[b1/1ee752] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample11)
+[ee/d080d5] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample9)
+[bd/eefdf2] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample2)
+[92/ab91d9] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample11)
+[9f/7a7905] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample9)
+[a2/d39438] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample9)
+[47/e0bfb2] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample2)
+[78/5cdd8d] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample8)
+[f7/2470f4] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_FLAGSTAT (sample8)
+[a1/0b01c8] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_IDXSTATS (sample2)
+[58/31e03e] Submitted process > NFCORE_RNASEQ:RNASEQ:MARK_DUPLICATES_PICARD:BAM_STATS_SAMTOOLS:SAMTOOLS_STATS (sample8)
+[5f/15cd5e] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG (sample10)
+[5a/8da9ca] Submitted process > NFCORE_RNASEQ:RNASEQ:MULTIQC_CUSTOM_BIOTYPE (sample8)
+[43/91b906] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG (sample10)
+WARN: K8s pod cannot be scheduled -- 0/8 nodes are available: 4 Insufficient memory, 4 node(s) didn't match Pod's node affinity/selector.
+[d4/869551] Submitted process > NFCORE_RNASEQ:RNASEQ:MULTIQC_CUSTOM_BIOTYPE (sample9)
+[5a/f5034a] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDCLIP (sample1)
+[14/5f345b] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDCLIP (sample1)
+[3e/f49b72] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_SE_GENE_SCALED (salmon_tx2gene.tsv)
+[4d/8691a4] Submitted process > NFCORE_RNASEQ:RNASEQ:DESEQ2_QC_STAR_SALMON
+[65/2f1473] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_SE_TRANSCRIPT (salmon_tx2gene.tsv)
+[5a/fa23f4] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_SE_GENE_LENGTH_SCALED (salmon_tx2gene.tsv)
+[04/50fb6f] Submitted process > NFCORE_RNASEQ:RNASEQ:QUANTIFY_STAR_SALMON:SALMON_SE_GENE (salmon_tx2gene.tsv)
+[91/c7764e] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG (sample1)
+[6a/c78a08] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG (sample1)
+WARN: K8s pod cannot be scheduled -- 0/8 nodes are available: 4 Insufficient memory, 4 node(s) didn't match Pod's node affinity/selector.
+[1e/11acaf] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG (sample9)
+[62/8fc0cc] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG (sample9)
+[0e/8871da] Submitted process > NFCORE_RNASEQ:RNASEQ:MULTIQC_CUSTOM_BIOTYPE (sample7)
+[16/f338d8] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG (sample11)
+[cb/298dc2] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG (sample11)
+[5d/f0b114] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDCLIP (sample2)
+[bb/7549f0] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDCLIP (sample2)
+[73/bd187d] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG (sample8)
+[3c/6ef7d1] Submitted process > NFCORE_RNASEQ:RNASEQ:CUSTOM_DUMPSOFTWAREVERSIONS (1)
+[1f/4e95ad] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_REVERSE:UCSC_BEDGRAPHTOBIGWIG (sample2)
+[0a/618c7f] Submitted process > NFCORE_RNASEQ:RNASEQ:BEDGRAPH_TO_BIGWIG_FORWARD:UCSC_BEDGRAPHTOBIGWIG (sample2)
+[78/54d19d] Submitted process > NFCORE_RNASEQ:RNASEQ:MULTIQC_CUSTOM_BIOTYPE (sample1)
+[42/8fe258] Submitted process > NFCORE_RNASEQ:RNASEQ:MULTIQC_CUSTOM_BIOTYPE (sample2)
+[d2/576911] Submitted process > NFCORE_RNASEQ:RNASEQ:MULTIQC (1)
+-[0;35m[nf-core/rnaseq][0;32m 12/12 samples passed STAR 5% mapped threshold:
+    94.96%: sample10
+    95.87%: sample5
+    95.81%: sample8
+    95.65%: sample3
+    89.44%: sample12
+    87.67%: sample1
+    ..see pipeline reports for full list
+[0m-
+-[0;35m[nf-core/rnaseq][0;32m Pipeline completed successfully[0m-
+Pod running: jolly-hilbert ... waiting for pod to stop running
+Pod jolly-hilbert has changed from running state [terminated:[exitCode:0, reason:Completed, startedAt:2022-11-07T12:31:18Z, finishedAt:2022-11-07T12:43:08Z, containerID:docker://c8718c5583b7f0be444c8685e30442c4a37f18c0653adb5740e1c79014f1cd6d]]

@@ -1,0 +1,69 @@
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: nextflow-pod-role
+rules:
+ - apiGroups: [""]
+   resources: ["pods","pods/status","pods/log","nodes","configmaps"]
+   verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+ - apiGroups: ["apps"]
+   resources: ["daemonsets"]
+   verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+
+---
+
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+   name: nextflow-pod-role-binding
+subjects:
+ - kind: ServiceAccount
+   name: nextflow
+   namespace: cws
+roleRef:
+   kind: ClusterRole
+   name: nextflow-pod-role
+   apiGroup: rbac.authorization.k8s.io
+
+---
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: nextflow
+
+---
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: nextflowscheduleraccount
+
+---
+
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: nextflowschedulerrole
+rules:
+ - apiGroups: [""]
+   resources: ["pods","pods/status","pods/exec","nodes","bindings","configmaps"]
+   verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+ - apiGroups: ["metrics.k8s.io"]
+   resources: ["nodes"]
+   verbs: ["get","list"]
+
+---
+
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+   name: myschedulerbinding
+subjects:
+ - kind: ServiceAccount
+   name: nextflowscheduleraccount
+   namespace: cws
+roleRef:
+   kind: ClusterRole
+   name: nextflowschedulerrole
+   apiGroup: rbac.authorization.k8s.io

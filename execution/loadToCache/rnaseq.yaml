@@ -1,0 +1,161 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: workflow-prepare
+spec:
+  selector:
+    matchLabels:
+      name: workflow-prepare
+  template:
+    metadata:
+      labels:
+        name: workflow-prepare
+    spec:
+      containers:
+      - command:
+        - /bin/bash
+        - -c
+        - sleep infinity
+        image: ubuntu
+        name: c1
+      initContainers:
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: ubuntu:20.04
+        name: init0
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/python:3.9--1
+        name: init1
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/fastqc:0.11.9--0
+        name: init2
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/bbmap:38.93--he522d1c_0
+        name: init3
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/trim-galore:0.6.7--hdfd78af_0
+        name: init4
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/mulled-v2-1fa26d1ce03c295fe2fdcf85831a92fbcbd7e8c2:afaaa4c6f5b308b4b6aa2dd8e99e1466b2a6b0cd-0
+        name: init5
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/samtools:1.15.1--h1170115_0
+        name: init6
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/perl:5.26.2
+        name: init7
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/salmon:1.5.2--h84f40af_0
+        name: init8
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/picard:2.27.4--hdfd78af_0
+        name: init9
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/preseq:3.1.2--h445547b_2
+        name: init10
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/rseqc:3.0.1--py37h516909a_1
+        name: init11
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/bedtools:2.30.0--hc088bd4_0
+        name: init12
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/qualimap:2.2.2d--1
+        name: init13
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/subread:2.0.1--hed695b0_0
+        name: init14
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/bioconductor-dupradar:1.18.0--r40_1
+        name: init15
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/stringtie:2.2.1--hecb563c_2
+        name: init16
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/ucsc-bedclip:377--h0b8a92a_2
+        name: init17
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/ucsc-bedgraphtobigwig:377--h446ed27_1
+        name: init18
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/bioconductor-tximeta:1.8.0--r40_0
+        name: init19
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/bioconductor-summarizedexperiment:1.20.0--r40_0
+        name: init20
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/mulled-v2-8849acf39a43cdd6c839a369a74c0adc823e2f91:ab110436faf952a33575c64dd74615a84011450b-0
+        name: init21
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/multiqc:1.13--pyhdfd78af_0
+        name: init22
+      nodeSelector:
+        cwsexperiment: 'true'

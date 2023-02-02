@@ -1,0 +1,101 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: workflow-prepare
+spec:
+  selector:
+    matchLabels:
+      name: workflow-prepare
+  template:
+    metadata:
+      labels:
+        name: workflow-prepare
+    spec:
+      containers:
+      - command:
+        - /bin/bash
+        - -c
+        - sleep infinity
+        image: ubuntu
+        name: c1
+      initContainers:
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: docker.io/yuukiiwa/git:latest
+        name: init0
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/python:3.8.3
+        name: init1
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/samtools:1.15.1--h1170115_0
+        name: init2
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/fastqc:0.11.9--0
+        name: init3
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/nanoplot:1.38.0--pyhdfd78af_0
+        name: init4
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/samtools:1.13--h8c37831_0
+        name: init5
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/minimap2:2.17--hed695b0_3
+        name: init6
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/bedtools:2.29.2--hc088bd4_0
+        name: init7
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/nanopolish:0.13.2--he3b7ca5_2
+        name: init8
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/ucsc-bedtobigbed:377--h446ed27_1
+        name: init9
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/ucsc-bedgraphtobigwig:377--h446ed27_1
+        name: init10
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/multiqc:1.11--pyhdfd78af_0
+        name: init11
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: docker.io/yuukiiwa/m6anet:1.0
+        name: init12
+      nodeSelector:
+        cwsexperiment: 'true'

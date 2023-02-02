@@ -1,0 +1,13 @@
+sample,fastq_1,fastq_2
+SAMPLE1_PE,/input/viralrecon/data/sample1_R1.fastq.gz,/input/viralrecon/data/sample1_R2.fastq.gz
+SAMPLE2_PE,/input/viralrecon/data/sample2_R1.fastq.gz,/input/viralrecon/data/sample2_R2.fastq.gz
+SAMPLE3_SE,/input/viralrecon/data/sample1_R1.fastq.gz,
+SAMPLE3_SE,/input/viralrecon/data/sample2_R1.fastq.gz,
+SAMPLE4_PE,/input/viralrecon/data/sample1_R1.fastq.gz,/input/viralrecon/data/sample1_R2.fastq.gz
+SAMPLE5_PE,/input/viralrecon/data/sample2_R1.fastq.gz,/input/viralrecon/data/sample2_R2.fastq.gz
+SAMPLE6_SE,/input/viralrecon/data/sample1_R1.fastq.gz,
+SAMPLE7_SE,/input/viralrecon/data/sample2_R1.fastq.gz,
+SAMPLE8_PE,/input/viralrecon/data/sample1_R1.fastq.gz,/input/viralrecon/data/sample1_R2.fastq.gz
+SAMPLE9_PE,/input/viralrecon/data/sample2_R1.fastq.gz,/input/viralrecon/data/sample2_R2.fastq.gz
+SAMPLE10_SE,/input/viralrecon/data/sample1_R1.fastq.gz,
+SAMPLE11_SE,/input/viralrecon/data/sample2_R1.fastq.gz,

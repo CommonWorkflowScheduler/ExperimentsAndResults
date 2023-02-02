@@ -1,0 +1,11 @@
+sampleID	forwardReads	reverseReads
+sampleID_1a	/input/ampliseq/data/1a_S103_L001_R1_001.fastq.gz	/input/ampliseq/data/1a_S103_L001_R2_001.fastq.gz
+sampleID_1	/input/ampliseq/data/1_S103_L001_R1_001.fastq.gz	/input/ampliseq/data/1_S103_L001_R2_001.fastq.gz
+sampleID_2a	/input/ampliseq/data/2a_S115_L001_R1_001.fastq.gz	/input/ampliseq/data/2a_S115_L001_R2_001.fastq.gz
+sampleID_2	/input/ampliseq/data/2_S115_L001_R1_001.fastq.gz	/input/ampliseq/data/2_S115_L001_R2_001.fastq.gz
+sampleID_1b	/input/ampliseq/data/1a_S103_L001_R1_001.fastq.gz	/input/ampliseq/data/1a_S103_L001_R2_001.fastq.gz
+sampleID_1c	/input/ampliseq/data/1_S103_L001_R1_001.fastq.gz	/input/ampliseq/data/1_S103_L001_R2_001.fastq.gz
+sampleID_2b	/input/ampliseq/data/2a_S115_L001_R1_001.fastq.gz	/input/ampliseq/data/2a_S115_L001_R2_001.fastq.gz
+sampleID_2c	/input/ampliseq/data/2_S115_L001_R1_001.fastq.gz	/input/ampliseq/data/2_S115_L001_R2_001.fastq.gz
+sampleID_1d	/input/ampliseq/data/1a_S103_L001_R1_001.fastq.gz	/input/ampliseq/data/1a_S103_L001_R2_001.fastq.gz
+sampleID_1e	/input/ampliseq/data/1_S103_L001_R1_001.fastq.gz	/input/ampliseq/data/1_S103_L001_R2_001.fastq.gz

@@ -1,0 +1,95 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: workflow-prepare
+spec:
+  selector:
+    matchLabels:
+      name: workflow-prepare
+  template:
+    metadata:
+      labels:
+        name: workflow-prepare
+    spec:
+      containers:
+      - command:
+        - /bin/bash
+        - -c
+        - sleep infinity
+        image: ubuntu
+        name: c1
+      initContainers:
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/bwa:0.7.17--hed695b0_7
+        name: init0
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/samtools:1.15.1--h1170115_0
+        name: init1
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/tabix:1.11--hdfd78af_0
+        name: init2
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/gawk:5.1.0
+        name: init3
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/gatk4:4.2.6.1--hdfd78af_0
+        name: init4
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/mulled-v2-fe8faa35dbf6dc65a0f7f5d4ea12e31a79f73e40:8110a70be2bfe7f75a2ea7f2a89cda4cc7732095-0
+        name: init5
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/fastqc:0.11.9--0
+        name: init6
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/mosdepth:0.3.3--hdfd78af_1
+        name: init7
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/strelka:2.9.10--h9ee0642_1
+        name: init8
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/vcftools:0.1.16--he513fc3_4
+        name: init9
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/bcftools:1.15.1--h0ea216a_0
+        name: init10
+      - command:
+        - sh
+        - -c
+        - exit 0
+        image: quay.io/biocontainers/multiqc:1.13a--pyhdfd78af_1
+        name: init11
+      nodeSelector:
+        cwsexperiment: 'true'

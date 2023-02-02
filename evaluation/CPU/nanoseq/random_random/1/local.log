@@ -1,0 +1,14 @@
+Dec-04 14:40:01.945 [main] DEBUG nextflow.cli.Launcher - $> nextflow kuberun /input/pipelines/nanoseq/ -v 'ceph-api-exp-data:/data' -v 'ceph-api-exp-input:/input' -head-image 'fabianlehmann/test1:nxf_v37' -config ../nextflow.config -config ../configs/nanoseq.config --save_reference false --outdir /data/output -remoteProfile test_nobc_nodx_rnamod -profile random_random,CPU
+Dec-04 14:40:02.033 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/flehmann/SchedulerApiExperiments/execution/CPU/../nextflow.config
+Dec-04 14:40:02.033 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/flehmann/SchedulerApiExperiments/execution/CPU/../configs/nanoseq.config
+Dec-04 14:40:02.033 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/flehmann/SchedulerApiExperiments/execution/nextflow.config
+Dec-04 14:40:02.034 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/flehmann/SchedulerApiExperiments/execution/configs/nanoseq.config
+Dec-04 14:40:02.052 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `random_random,CPU`
+Dec-04 14:40:02.708 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `random_random,CPU`
+Dec-04 14:40:02.724 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [rank_min_roundrobin, rank_max_fair, random_roundrobin, rank_random, rank_min_random, random_fair, CPU, min_random, rank_fair, rank_roundrobin, random_random, max_fair, rank_min_fair, fifo_fair, max_roundrobin, fifo_roundrobin, rank_max_random, rank_max_roundrobin, FONDA, max_random, fifo_random, min_roundrobin, min_fair]
+Dec-04 14:40:02.852 [main] DEBUG nextflow.k8s.K8sConfig - Kubernetes workDir=/data/work/; projectDir=/data/project/; volumeClaims=[ceph-api-exp-input, ceph-api-exp-data]
+Dec-04 14:40:03.052 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/flehmann/.nextflow/scm
+Dec-04 14:40:03.099 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Created K8s configMap with name: nf-config-66e5d44c
+Dec-04 14:40:03.126 [main] INFO  nextflow.k8s.K8sDriverLauncher - Launcher pod spec file: .nextflow.pod.yaml
+Dec-04 14:52:47.247 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Wait for pod termination name=desperate-wozniak
+Dec-04 14:52:47.799 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Deleted K8s configMap with name: nf-config-66e5d44c

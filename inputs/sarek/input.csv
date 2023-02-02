@@ -1,0 +1,7 @@
+patient,sex,status,sample,lane,fastq_1,fastq_2
+test,XX,0,test1,test_L1,/input/sarek/data/test_1.fastq.gz,/input/sarek/data/test_2.fastq.gz
+test,XX,0,test2,test_L1,/input/sarek/data/test_rnaseq_1.fastq.gz,/input/sarek/data/test_rnaseq_2.fastq.gz
+test,XX,1,test3,test_L1,/input/sarek/data/test_duplex_umi_1.fastq.gz,/input/sarek/data/test_duplex_umi_2.fastq.gz
+test,XX,1,test4,test_L1,/input/sarek/data/test2_1.fastq.gz,/input/sarek/data/test2_2.fastq.gz
+test,XX,0,test7,test_L1,/input/sarek/data/test.umi_1.fastq.gz,/input/sarek/data/test.umi_2.fastq.gz
+test,XX,0,test8,test_L1,/input/sarek/data/test2.umi_1.fastq.gz,/input/sarek/data/test2.umi_2.fastq.gz

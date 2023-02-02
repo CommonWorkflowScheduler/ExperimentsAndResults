@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: nextflow
+    component: scheduler
+    tier: control-plane
+  name: workflow-scheduler
+spec:
+  containers:
+  - env:
+    - name: SCHEDULER_NAME
+      value: workflow-scheduler
+    - name: AUTOCLOSE
+      value: "false"
+    image: commonworkflowscheduler/kubernetesscheduler:v1.0
+    imagePullPolicy: Always
+    name: workflow-scheduler
+    resources:
+      limits:
+        cpu: "2"
+        memory: 1400Mi
+      requests:
+        cpu: "2"
+        memory: 1400Mi
+    volumeMounts:
+    - mountPath: /input
+      name: vol-1
+    - mountPath: /data
+      name: vol-2
+  nodeSelector: 
+    cwsscheduler: 'true'
+  securityContext:
+    runAsUser: 0
+  serviceAccount: nextflowscheduleraccount
+  volumes:
+  - name: vol-1
+    persistentVolumeClaim:
+      claimName: api-exp-input
+  - name: vol-2
+    persistentVolumeClaim:
+      claimName: api-exp-data
