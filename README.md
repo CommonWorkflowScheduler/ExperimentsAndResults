@@ -1,4 +1,5 @@
 # Experiments and Results
+[![DOI](https://zenodo.org/badge/596612494.svg)](https://zenodo.org/badge/latestdoi/596612494)
 
 In this repository, you will find all experimental setup scripts and results of the paper "**How Workflow Engines Should Talk to Resource Managers: A Proposal for a Common Workflow Scheduling Interface**."
 
