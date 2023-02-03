@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir data
 cd data
 wget -q https://github.com/nf-core/test-datasets/raw/eager/testdata/Mammoth/fastq/JK2782_TGGCCGATCAACGA_L007_R1_001.fastq.gz.tengrand.fq.gz

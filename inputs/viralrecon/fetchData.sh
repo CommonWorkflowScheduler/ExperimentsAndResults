@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir data
 cd data
 wget -q https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/illumina/amplicon/sample1_R1.fastq.gz

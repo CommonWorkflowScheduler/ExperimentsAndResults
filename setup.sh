@@ -1,5 +1,5 @@
+#!/bin/bash
 namespace="cws"
-
 
 kubectl create namespace $namespace
 kubectl apply -f setup/pvc.yaml --namespace $namespace

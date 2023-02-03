@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir data
 cd data
 wget -q https://github.com/nf-core/test-datasets/raw/ampliseq/testdata/1a_S103_L001_R1_001.fastq.gz	

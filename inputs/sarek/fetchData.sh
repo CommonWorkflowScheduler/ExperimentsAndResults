@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir data
 cd data
 wget -q https://raw.githubusercontent.com/nf-core/test-datasets/modules/data/genomics/homo_sapiens/illumina/fastq/test_1.fastq.gz

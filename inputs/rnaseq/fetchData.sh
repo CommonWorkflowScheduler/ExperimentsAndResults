@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir data
 cd data
 wget -q "https://github.com/nf-core/test-datasets/raw/rnaseq/testdata/GSE110004/SRR6357070_1.fastq.gz"

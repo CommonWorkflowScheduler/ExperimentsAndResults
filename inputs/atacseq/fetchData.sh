@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir data
 cd data
 wget -q https://raw.githubusercontent.com/nf-core/test-datasets/atacseq/testdata/SRR1822153_1.fastq.gz

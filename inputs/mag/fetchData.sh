@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir data
 cd data
 wget -q https://github.com/nf-core/test-datasets/raw/mag/test_data/test_minigut_R1.fastq.gz

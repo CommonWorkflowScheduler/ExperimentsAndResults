@@ -1,3 +1,4 @@
+#!/bin/bash
 apt update > /dev/null
 apt install -y git wget unzip  > /dev/nulldata
 mkdir /input/pipelines
