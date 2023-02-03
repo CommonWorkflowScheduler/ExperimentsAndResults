@@ -20,7 +20,7 @@ To change this, adjust the namespace in the following files:
 - [execution/runExperiments.sh](execution/runExperiments.sh)
 
 To set up the Kubernetes environment, run the [setup.sh](setup.sh) in the root directory: `bash setup.sh`.
-To run the experiments, go into the [execution](execution/) directory and run: `bash runExperiment.sh <Name of your target cluster>`. Make sure to delete the [execution/](execution/) directory before, as existing experiments are skipped.
+To run the experiments, go into the [execution](execution/) directory and run: `bash runExperiment.sh <Name of your target cluster>`. Make sure to delete the [evaluation/](evaluation/) directory before, as existing experiments are skipped.
 
 ---
 
